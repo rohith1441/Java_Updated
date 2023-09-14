@@ -1,22 +1,29 @@
 package ATM_applcation;
 
-import java.util.Scanner;
+import java.util.Objects;
 
 public class atm {
-    private int account_number;
-    private int password;
+    private String account_number;
+    private String password;
     private double saving_balance;
 
-    public atm(int account_number, int password) {
+    public atm(String account_number, String password) throws Exception {
         this.account_number = account_number;
         this.password = password;
         options_menu optionsMenu = new options_menu();
-        if ((account_number == 9876543 && password == 9876) || (account_number == 8989898 && password == 1890)) {
+        if ((Objects.equals(account_number, "9876543") && Objects.equals(password, "9876")) || (Objects.equals(account_number, "8989898") && Objects.equals(password, "1890"))) {
             optionsMenu.setAmount(10000);
             optionsMenu.setSaving_amount(4000);
-            optionsMenu.options();
+            try{
+            optionsMenu.options();}
+            catch (Exception e){
+                System.out.println("Enter from the options");
+                optionsMenu.options();
+            }
+
         } else {
             System.out.println("Wrong Account Number or Password");
+
         }
     }
 }
