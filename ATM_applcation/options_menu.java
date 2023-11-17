@@ -24,8 +24,8 @@ public class options_menu {
         String select = String.valueOf(choice);
         if ((select.equals("1"))) {
             CheckingAccount();
-        } else if (select.equals("2")) SavingAccount();
-        else if (select.equals("3")) {
+        } else if ("2".equals(select)) SavingAccount();
+        else if ("3".equals(select)) {
             System.out.println("Thank You for using the application");
         } else {
             System.out.println("Enter the correct choice");
