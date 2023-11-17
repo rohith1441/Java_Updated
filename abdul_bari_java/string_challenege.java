@@ -11,7 +11,7 @@ public class string_challenege {
         int j = domain.indexOf('.');
         String domain_name = domain.substring(0,j);
         System.out.println(domain_name);
-        System.out.println(domain_name.equals("gmail"));
+        System.out.println("gmail".equals(domain_name));
 
     }
 }

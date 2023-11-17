@@ -60,7 +60,7 @@ class Student extends Thread{
             text=whiteBorad.read();
             System.out.println(name + "Reading "+text);
             System.out.flush();
-    }while(!text.equals("end"));
+    }while(!"end".equals(text));
     }
 }
 public class Teacher_student_WhiteBoard_challenge {

@@ -10,7 +10,7 @@ public class conditons_challenge {
         int ind = url.indexOf(":");
         String protocol = url.substring(0,ind);
         System.out.println(protocol);
-        if(protocol.equals("http")){
+        if("http".equals(protocol)){
             System.out.println("Hypertext Transfer Protocol");
         }
         else{
@@ -20,10 +20,10 @@ public class conditons_challenge {
         int ind3 = url.indexOf(".",ind2+1);
         String website = url.substring(ind3+1,url.length());
         System.out.println(website);
-        if(website.equals("com")){
+        if("com".equals(website)){
             System.out.println("commercial");
         }
-        else if(website.equals("org")){
+        else if("org".equals(website)){
             System.out.println("Organization");
         }
         else{
